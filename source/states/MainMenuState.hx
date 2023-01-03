@@ -1,4 +1,4 @@
-package;
+package states;
 
 #if desktop
 import Discord.DiscordClient;
@@ -25,11 +25,9 @@ class MainMenuState extends MusicBeatState
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 
-	#if !switch
-	var optionShit:Array<String> = ['story mode', 'freeplay', 'donate', 'options'];
-	#else
-	var optionShit:Array<String> = ['story mode', 'freeplay'];
-	#end
+
+	var optionShit:Array<String> = ['story mode', 'freeplay', 'donate'];
+
 
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
@@ -181,10 +179,7 @@ class MainMenuState extends MusicBeatState
 
 										trace("Freeplay Menu Selected");
 
-									case 'options':
-										FlxTransitionableState.skipNextTransIn = true;
-										FlxTransitionableState.skipNextTransOut = true;
-										FlxG.switchState(new OptionsMenu());
+			
 								}
 							});
 						}
