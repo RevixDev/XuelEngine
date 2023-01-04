@@ -32,6 +32,7 @@ class MainMenuState extends MusicBeatState
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 
+
 	override function create()
 	{
 		#if desktop
@@ -41,6 +42,7 @@ class MainMenuState extends MusicBeatState
 
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
+
 
 		if (!FlxG.sound.music.playing)
 		{
